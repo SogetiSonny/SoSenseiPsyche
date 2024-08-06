@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sogeti</groupId>
-	<artifactId>SoSenseiPsuche</artifactId>
+	<artifactId>SoSenseiPsyche</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SoSenseiPsuche</name>
+	<name>SoSenseiPsyche</name>
 	<description>Summerschool game project</description>
 	<url/>
 	<licenses>
