@@ -1,12 +1,12 @@
-package com.sogeti.SoSenseiPsuche;
+package com.sogeti.SoSenseiPsyche;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SoSenseiPsucheApplication {
+public class SoSenseiPsycheApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(SoSenseiPsucheApplication.class, args);
+		SpringApplication.run(SoSenseiPsycheApplication.class, args);
 	}
 
 }
