@@ -1,0 +1,2 @@
+# SoSenseiPsyche
+Summerschool game project
