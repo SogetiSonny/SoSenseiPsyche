@@ -10,7 +10,7 @@ public class SoSenseiPsycheApplication {
         SpringApplication.run(SoSenseiPsycheApplication.class, args);
 
         Game game = new Game();
-        game.play();
+        game.startGame();
     }
 
 }

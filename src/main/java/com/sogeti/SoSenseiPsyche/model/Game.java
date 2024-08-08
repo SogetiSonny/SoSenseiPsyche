@@ -1,20 +1,18 @@
 package com.sogeti.SoSenseiPsyche.model;
 
 
-import java.util.Scanner;
-
 public class Game {
     private static final int CODE_LENGTH = 4;
-    private static final int MAX_ATTEMPTS = 10;
-    private final String[] COLORS = {"R", "G", "B", "Y", "O", "P", "W", "S"};
-    private final Scanner scanner = new Scanner(System.in);
+    private static final int MAX_ATTEMPTS = 12;
+    boolean isGameOver;
 
-    public Game() {
-    }
 
-    public void play() {
+    public void startGame() {
         System.out.println("Welcome to Mastermind!");
-        System.out.println("Available colors: R (Red), G (Green), B (Blue), Y (Yellow), O (Orange), P (Purple), W (White), S (Silver)");
+        System.out.println("Available colors: ");
 
+        for (Color color : Color.values()) {
+            System.out.println(color.name() + " (" + color.getName() + ")");
+        }
     }
 }
