@@ -1,12 +1,16 @@
 package com.sogeti.SoSenseiPsyche;
 
+import com.sogeti.SoSenseiPsyche.model.Game;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SoSenseiPsycheApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(SoSenseiPsycheApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SoSenseiPsycheApplication.class, args);
+
+        Game game = new Game();
+        game.startGame();
+    }
 
 }

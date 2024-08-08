@@ -4,48 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f13a97e7-a875-4462-a110-aa52c3ae8468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sogeti/SoSenseiPsyche/SoSenseiPsucheApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+    <list default="true" id="f13a97e7-a875-4462-a110-aa52c3ae8468" name="Changes" comment="guesses part">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Validator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/material_theme_project_new.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/issuestore/0/7/072adc675d3aa234f66fea3faf4094b16d4de3c5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/issuestore/1/a/1a273f73b7a477b0745593641bd708a6182c7ad5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/issuestore/1/f/1f1763f358c257ea3515417352b82b0165647ad1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/issuestore/3/2/32e074f71d16c1e88ac02aa83592ca6ad1fd98a8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/issuestore/b/0/b07ced160ded0c05d31948a1f91f5f968d66eb71" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/securityhotspotstore/0/7/072adc675d3aa234f66fea3faf4094b16d4de3c5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/securityhotspotstore/1/a/1a273f73b7a477b0745593641bd708a6182c7ad5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/securityhotspotstore/1/f/1f1763f358c257ea3515417352b82b0165647ad1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/securityhotspotstore/3/2/32e074f71d16c1e88ac02aa83592ca6ad1fd98a8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/securityhotspotstore/b/0/b07ced160ded0c05d31948a1f91f5f968d66eb71" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea_old/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sogeti/SoSenseiPsuche/SoSenseiPsucheApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sogeti/SoSenseiPsuche/SoSenseiPsucheApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/SoSenseiPsycheApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/SoSenseiPsycheApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Guesses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Guesses.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dmytromatsalyshenko&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SogetiSonny/SoSenseiPsyche.git&quot;,
+    &quot;accountId&quot;: &quot;1f727f31-ee18-460f-ae7c-49ad63ab255a&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -53,10 +52,10 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2kHkdt2STXfGYDfT8Co4P85aNsr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -64,15 +63,59 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.SoSenseiPsycheApplication.executor": "Run",
+    "Application.guesses.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "developGuess",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/projects/SoSenseiPsyche",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "MTFeaturesSettingsConfigurable"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.SoSenseiPsycheApplication">
+    <configuration name="Guesses" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sogeti.SoSenseiPsyche.model.Guesses" />
+      <module name="SoSenseiPsyche" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sogeti.SoSenseiPsyche.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SoSenseiPsycheApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sogeti.SoSenseiPsyche.SoSenseiPsycheApplication" />
+      <module name="SoSenseiPsyche" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sogeti.SoSenseiPsyche.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SoSenseiPsycheApplication" />
+        <item itemvalue="Application.Guesses" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -82,6 +125,20 @@
       <option name="presentableId" value="Default" />
       <updated>1722947980972</updated>
     </task>
+    <task id="LOCAL-00001" summary="guesses part">
+      <option name="closed" value="true" />
+      <created>1723123110611</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723123110611</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated gitignore file" />
+    <MESSAGE value="guesses part" />
+    <option name="LAST_COMMIT_MESSAGE" value="guesses part" />
   </component>
 </project>
