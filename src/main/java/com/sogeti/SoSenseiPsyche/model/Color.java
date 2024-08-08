@@ -1,6 +1,6 @@
 package com.sogeti.SoSenseiPsyche.model;
 
-enum Color {
+public enum Color {
     RED,
     GREEN,
     BLUE,
