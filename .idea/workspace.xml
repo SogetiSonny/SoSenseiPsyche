@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f13a97e7-a875-4462-a110-aa52c3ae8468" name="Changes" comment="updated gitignore file">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Guesses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="f13a97e7-a875-4462-a110-aa52c3ae8468" name="Changes" comment="guesses part">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Validator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/SoSenseiPsycheApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/SoSenseiPsycheApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Guesses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Guesses.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +67,7 @@
     "Application.guesses.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "developGuess",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/projects/SoSenseiPsyche",
@@ -123,10 +125,20 @@
       <option name="presentableId" value="Default" />
       <updated>1722947980972</updated>
     </task>
+    <task id="LOCAL-00001" summary="guesses part">
+      <option name="closed" value="true" />
+      <created>1723123110611</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723123110611</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated gitignore file" />
+    <MESSAGE value="guesses part" />
+    <option name="LAST_COMMIT_MESSAGE" value="guesses part" />
   </component>
 </project>
