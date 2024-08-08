@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Game {
     private static final int CODE_LENGTH = 4;
     private static final int MAX_ATTEMPTS = 10;
-    private final String[] COLORS = {"R", "G", "B", "Y", "O", "P"};
+    private final String[] COLORS = {"R", "G", "B", "Y", "O", "P", "W", "S"};
     private final Scanner scanner = new Scanner(System.in);
 
     public Game() {
