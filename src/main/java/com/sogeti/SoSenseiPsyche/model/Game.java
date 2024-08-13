@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Game {
     public static final int CODE_LENGTH = 4;
-    boolean isGameOver;
 
 // for testing purpose
 
@@ -17,6 +16,30 @@ public class Game {
             System.out.println(color.name() + " (" + color.name().charAt(0) + ")");
         }
 
-        Guess.getUserGuess(new Scanner(System.in));
+        makeGuess(new Scanner(System.in));
+    }
+
+    public static String[] makeGuess(Scanner scanner) {
+        System.out.print("Enter your guess (e.g., RGBY): ");
+        String input = scanner.nextLine().toUpperCase().trim();
+        if (input.length() != CODE_LENGTH) {
+            return null;
+        }
+        String[] guess = new String[CODE_LENGTH];
+        for (int i = 0; i < CODE_LENGTH; i++) {
+            if (!isCorrectColor(input.charAt(i))) {
+                return null;
+            }
+            guess[i] = String.valueOf(input.charAt(i));
+        }
+        return guess;
+    }
+    public static boolean isCorrectColor(char c) {
+        for (Color color : Color.values()) {
+            if (color.name().charAt(0) == c) {
+                return true;
+            }
+        }
+        return false;
     }
 }
