@@ -6,7 +6,7 @@ import java.util.List;
 public class Code {
     List<Colour> code = new ArrayList<>();
 
-    Colour createRandomColour() {
+    private Colour createRandomColour() {
         int max = 8;
         int randomNum = (int) (Math.random() * max);
         return switch (randomNum) {
