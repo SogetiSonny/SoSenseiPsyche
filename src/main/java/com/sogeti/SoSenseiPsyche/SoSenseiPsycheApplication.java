@@ -8,10 +8,5 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SoSenseiPsycheApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SoSenseiPsycheApplication.class, args);
-		Code code = new Code();
-		code.generateCode();
-		System.out.println(code.getCode());
 	}
-
-
 }
