@@ -4,20 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Code {
-    List<Colour> code = new ArrayList<>();
+    List<Color> code = new ArrayList<>();
 
-    private Colour createRandomColour() {
+    private Color createRandomColour() {
         int max = 8;
         int randomNum = (int) (Math.random() * max);
         return switch (randomNum) {
-            case 0 -> Colour.BLUE;
-            case 1 -> Colour.ORANGE;
-            case 2 -> Colour.PINK;
-            case 3 -> Colour.GREEN;
-            case 4 -> Colour.RED;
-            case 5 -> Colour.SILVER;
-            case 6 -> Colour.WHITE;
-            case 7 -> Colour.YELLOW;
+            case 0 -> Color.BLUE;
+            case 1 -> Color.ORANGE;
+            case 2 -> Color.PINK;
+            case 3 -> Color.GREEN;
+            case 4 -> Color.RED;
+            case 5 -> Color.SILVER;
+            case 6 -> Color.WHITE;
+            case 7 -> Color.YELLOW;
             default -> throw new IllegalStateException("Unexpected value: " + randomNum);
         };
     }
@@ -28,7 +28,7 @@ public class Code {
         }
     }
 
-    public List<Colour> getCode() {
+    public List<Color> getCode() {
         return code;
     }
 }
