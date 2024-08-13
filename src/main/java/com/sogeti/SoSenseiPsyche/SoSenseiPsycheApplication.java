@@ -1,6 +1,5 @@
 package com.sogeti.SoSenseiPsyche;
 
-import com.sogeti.SoSenseiPsyche.model.Code;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
