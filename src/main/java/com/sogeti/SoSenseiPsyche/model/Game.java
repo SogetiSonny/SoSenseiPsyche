@@ -15,19 +15,22 @@ public class Game {
         for (Color color : Color.values()) {
             System.out.println(color.name() + " (" + color.name().charAt(0) + ")");
         }
-
-        makeGuess(new Scanner(System.in));
+        makeGuess();
     }
 
-    public static String[] makeGuess(Scanner scanner) {
+    public static String[] makeGuess() {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your guess (e.g., RGBY): ");
         String input = scanner.nextLine().toUpperCase().trim();
         if (input.length() != CODE_LENGTH) {
-            return null;
+            System.out.println("Please enter 4 characters.");
+            makeGuess();
         }
         String[] guess = new String[CODE_LENGTH];
         for (int i = 0; i < CODE_LENGTH; i++) {
             if (!isCorrectColor(input.charAt(i))) {
+                System.out.println("Please enter valid colors");
+                makeGuess();
                 return null;
             }
             guess[i] = String.valueOf(input.charAt(i));

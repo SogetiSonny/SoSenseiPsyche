@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f13a97e7-a875-4462-a110-aa52c3ae8468" name="Changes" comment="guesses part">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Guess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Guess.java" afterDir="false" />
     </list>
@@ -47,13 +46,13 @@
   "keyToString": {
     "Application.SoSenseiPsycheApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "developSecret",
+    "git-widget-placeholder": "feature/validation-and-feedback",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/projects/SoSenseiPsyche",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MTFeaturesSettingsConfigurable"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager" selected="Application.SoSenseiPsycheApplication">
