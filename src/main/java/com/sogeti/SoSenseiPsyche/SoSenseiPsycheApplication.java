@@ -8,5 +8,4 @@ public class SoSenseiPsycheApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SoSenseiPsycheApplication.class, args);
 	}
-
 }
