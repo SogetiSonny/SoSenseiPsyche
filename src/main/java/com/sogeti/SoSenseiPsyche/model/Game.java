@@ -1,6 +1,8 @@
 package com.sogeti.SoSenseiPsyche.model;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,19 +11,28 @@ public class Game {
     public static final int MAX_ATTEMPTS = 12;
     public int attempt = 0;
     private Code secretCode;
-    private List<Guess> guesses;
+    private String[] newGuess;
+    private List<String> guesses;
 
 // for testing purpose
 
     public void startGame() {
+        guesses = new ArrayList<>();
         secretCode = new Code();
         System.out.println("Welcome to So Sensei Psyche!");
+        System.out.println("You have 12 attempts to crack the code.");
+        System.out.println("You can choose from the following colors: " + Arrays.toString(Color.values()).replace("[", "").replace("]", ""));
 
+        secretCode.generateCode();
 
         // Game logic: make guess, check if game is solved, get feedback, new
         // guess or game solved or max attempts reached is game over.
         while (!isGameOver()) {
-            makeGuess(new Scanner(System.in));
+            newGuess = makeGuess(new Scanner(System.in));
+            guesses.add(Arrays.toString(newGuess));
+            for (String guess : guesses) {
+                System.out.println(guess.replace("[", "").replace("]", ""));
+            }
 
             // feedback logic
 
@@ -32,17 +43,18 @@ public class Game {
     // TODO: return type should be Feedback. Adjustments need to be made when
     //  class Feedback and logic is finished.
     public static String[] makeGuess(Scanner scanner) {
-        System.out.print("Enter your guess (e.g., RGBY): ");
-        String input = scanner.nextLine().toUpperCase().trim();
-        if (input.length() != CODE_LENGTH) {
+        System.out.print("Enter your guess (e.g., R G B Y): ");
+        String[] guess = scanner.nextLine().toUpperCase().split(" ");
+
+        if (guess.length != CODE_LENGTH) {
             return null;
         }
-        String[] guess = new String[CODE_LENGTH];
+
         for (int i = 0; i < CODE_LENGTH; i++) {
-            if (!isCorrectColor(input.charAt(i))) {
+            if (!isCorrectColor(guess[i])) {
                 return null;
             }
-            guess[i] = String.valueOf(input.charAt(i));
+            guess[i] = String.valueOf(guess[i]);
         }
         return guess;
     }
@@ -55,9 +67,9 @@ public class Game {
         return false;
     }
 
-    public static boolean isCorrectColor(char c) {
+    public static boolean isCorrectColor(String c) {
         for (Color color : Color.values()) {
-            if (color.name().charAt(0) == c) {
+            if (color.name().startsWith(c)) {
                 return true;
             }
         }
