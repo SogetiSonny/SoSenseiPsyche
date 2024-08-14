@@ -17,6 +17,9 @@ public class Game {
         secretCode = new Code();
         System.out.println("Welcome to So Sensei Psyche!");
 
+
+        // Game logic: make guess, check if game is solved, get feedback, new
+        // guess or game solved or max attempts reached is game over.
         while (!isGameOver()) {
             makeGuess(new Scanner(System.in));
 
