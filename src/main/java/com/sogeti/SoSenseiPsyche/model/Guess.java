@@ -13,4 +13,7 @@ public class Guess {
     public void setGuess(List<Color> guess) {
         this.guess = guess;
     }
+
+
+
 }

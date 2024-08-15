@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Code {
-    List<Color> code = new ArrayList<>();
+    List<Character> code = new ArrayList<>();
 
     private Color createRandomColour() {
         int max = 8;
@@ -24,11 +24,13 @@ public class Code {
 
     public void generateCode() {
         for (int i = 0; i < 4; i++) {
-            code.add(createRandomColour());
+            code.add(createRandomColour().name().charAt(0));
         }
     }
 
-    public List<Color> getCode() {
+
+    public List<Character> getCode() {
+        generateCode();
         return code;
     }
 }
