@@ -15,6 +15,11 @@ public class Game {
     Feedback feedback = new Feedback();
     Code code = new Code();
     List<Character> secretCode = code.getCode();
+    List<List<Character>> feedbackHistory = new ArrayList<>();
+    List<List<Character>> guessesHistory = new ArrayList<>();
+
+    int attemptNumber = 1;
+    int maxNumberOfAttempts = 10;
 
     public void startGame() {
         System.out.println("secretcode" + secretCode);
@@ -24,11 +29,25 @@ public class Game {
         for (Color color : Color.values()) {
             System.out.println(color.name() + " (" + color.name().charAt(0) + ")");
         }
+        //displaying fot test purpose
         System.out.println(secretCode);
-        List<Character> guessedCode = makeGuess();
-        System.out.println(feedback.getFeedback(guessedCode, secretCode));
+
+        while (attemptNumber < maxNumberOfAttempts) {
+            List<Character> guessedCode = makeGuess();
+            List<Character> feedbackToStore = feedback.getFeedback(guessedCode, secretCode);
+            feedbackHistory.add(feedbackToStore);
+            guessesHistory.add(guessedCode);
+
+            //System.out.println("guessed codes: " + guessesHistory.toString() + " | " + "feedbacks: " + feedbackHistory.toString());
+            for (int i = 1; i <= attemptNumber; i++) {
+                System.out.println("| " + i + " | " + guessesHistory.get(i - 1) + " | " + feedbackHistory.get(i - 1) + " | ");
+            }
+            attemptNumber++;
+        }
 
     }
+
+
 
     public static List<Character> makeGuess() {
         Scanner scanner = new Scanner(System.in);
@@ -50,7 +69,7 @@ public class Game {
                 guessedCode.add(input.charAt(i));
             }
         }
-
+        System.out.println("reaching here");
         return guessedCode;
 
     }

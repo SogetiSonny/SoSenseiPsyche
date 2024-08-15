@@ -8,13 +8,13 @@ import static com.sogeti.SoSenseiPsyche.model.Game.CODE_LENGTH;
 
 public class Feedback {
 
-    public String getFeedback(List<Character> secretCode, List<Character> guessedCode) {
+    public List<Character> getFeedback(List<Character> secretCode, List<Character> guessedCode) {
         List<Character> remainingSecretCode = new ArrayList<>(secretCode);
         List<Character> remainingGuessedCode = new ArrayList<>(guessedCode);
-        StringBuilder feedback = new StringBuilder();
+        List<Character> feedback = new ArrayList<>();
         for (int index = 0; index < CODE_LENGTH; index++) {
             if (guessedCode.get(index).equals(secretCode.get(index))) {
-                feedback.append("o");
+                feedback.add('o');
                 remainingSecretCode.set(index, ' ');
                 remainingGuessedCode.set(index, ' ');
             }
@@ -24,11 +24,11 @@ public class Feedback {
 
         for (Character guessedChar : remainingGuessedCode) {
             if (remainingSecretCode.contains(guessedChar)) {
-                feedback.append("x");
+                feedback.add('x');
                 remainingSecretCode.remove(guessedChar);
             }
         }
-        return feedback.toString();
+        return feedback;
     }
 
 
