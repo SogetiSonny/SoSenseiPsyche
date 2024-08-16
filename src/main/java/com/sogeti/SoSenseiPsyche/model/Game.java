@@ -51,32 +51,6 @@ public class Game {
         return String.format("%-" + 7 + "s", string);
     }
 
-
-
-//    public static List<Character> makeGuess() {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.print("Enter your guess (e.g., RGBY): ");
-//        String input = scanner.nextLine().toUpperCase().trim();
-//        List<Character> guessedCode = new ArrayList<>();
-//        if (input.length() != CODE_LENGTH) {
-//            System.out.println("Please enter 4 characters.");
-//            makeGuess();
-//        }
-//
-//        for (int i = 0; i < CODE_LENGTH; i++) {
-//            System.out.println("reaching this" + i + "times");
-//            if (!isCorrectColor(input.charAt(i))) {
-//                System.out.println("Please enter valid colors");
-//                makeGuess();
-//                //return null;
-//            } else {
-//                System.out.println("Reaching this other" + i + "times");
-//                guessedCode.add(input.charAt(i));
-//            }
-//        }
-//        return guessedCode;
-//    }
-
     public static List<Character> makeGuess() {
         List<Character> guessedCode = new ArrayList<>();
         boolean isValidGuess = false;
@@ -100,10 +74,6 @@ public class Game {
         return guessedCode;
     }
 
-
-
-
-
     public static boolean isCorrectColor(char c) {
         for (Color color : Color.values()) {
             if (color.name().charAt(0) == c) {
@@ -112,5 +82,4 @@ public class Game {
         }
         return false;
     }
-
 }

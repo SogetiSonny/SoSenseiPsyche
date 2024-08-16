@@ -28,10 +28,8 @@ public class SecretCode {
         }
     }
 
-
     public List<Character> getSecretCode() {
         generateCode();
-        return secretCode *
-                 ;
+        return secretCode;
     }
 }
