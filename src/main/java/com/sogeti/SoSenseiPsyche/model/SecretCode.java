@@ -3,8 +3,8 @@ package com.sogeti.SoSenseiPsyche.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Code {
-    List<Character> code = new ArrayList<>();
+public class SecretCode {
+    List<Character> secretCode = new ArrayList<>();
 
     private Color createRandomColour() {
         int max = 8;
@@ -24,13 +24,14 @@ public class Code {
 
     public void generateCode() {
         for (int i = 0; i < 4; i++) {
-            code.add(createRandomColour().name().charAt(0));
+            secretCode.add(createRandomColour().name().charAt(0));
         }
     }
 
 
-    public List<Character> getCode() {
+    public List<Character> getSecretCode() {
         generateCode();
-        return code;
+        return secretCode *
+                 ;
     }
 }
