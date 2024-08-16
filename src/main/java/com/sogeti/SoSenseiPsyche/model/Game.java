@@ -35,20 +35,11 @@ public class Game {
             feedbackHistory.add(feedbackToStore);
             guessesHistory.add(guessedCode);
 
-            for (int i = 1; i <= attemptNumber; i++) {
-                System.out.println("| " + String.format("%-" + 2 + "s", i) + " | " + formatList(guessesHistory.get(i - 1)) + " | " + formatList(feedbackHistory.get(i - 1)) + " | ");
-            }
+            GameboardCreator.print(attemptNumber, guessesHistory, feedbackHistory);
+
             attemptNumber++;
         }
 
-    }
-
-    public static String formatList(List<Character> listToFormat) {
-        String string = listToFormat.toString()
-                .replace("[", "")
-                .replace("]", "")
-                .replace(",", "");
-        return String.format("%-" + 7 + "s", string);
     }
 
     public static List<Character> makeGuess() {
@@ -64,6 +55,7 @@ public class Game {
                 for (int i = 0; i < CODE_LENGTH; i++) {
                     if (!isCorrectColor(input.charAt(i))) {
                         System.out.println("Please enter valid colors");
+                        break;
                     } else {
                         guessedCode.add(input.charAt(i));
                         isValidGuess = true;
