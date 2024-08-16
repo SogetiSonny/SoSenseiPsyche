@@ -6,9 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Game {
-    public static final int CODE_LENGTH = 4;
 
-// for testing purpose
     Feedback feedback = new Feedback();
     SecretCode code = new SecretCode();
     List<Character> secretCode = code.getSecretCode();
@@ -17,26 +15,26 @@ public class Game {
 
     int attemptNumber = 1;
     int maxNumberOfAttempts = 10;
+    public static final int CODE_LENGTH = 4;
 
     public void startGame() {
         System.out.println("secretcode" + secretCode);
         System.out.println("Welcome to Mastermind!");
         System.out.println("Available colors: ");
-
+        //after the first attempts become annoying to have the colors only at the beginning, it would be better to
+        //display them on one line after every attempt
         for (Color color : Color.values()) {
             System.out.println(color.name() + " (" + color.name().charAt(0) + ")");
         }
         //displaying fot test purpose
-        System.out.println(secretCode);
+        //rgbyySystem.out.println(secretCode);
 
         while (attemptNumber <= maxNumberOfAttempts) {
             List<Character> guessedCode = makeGuess();
             List<Character> feedbackToStore = feedback.getFeedback(guessedCode, secretCode);
             feedbackHistory.add(feedbackToStore);
             guessesHistory.add(guessedCode);
-
             GameboardCreator.print(attemptNumber, guessesHistory, feedbackHistory);
-
             attemptNumber++;
         }
 
