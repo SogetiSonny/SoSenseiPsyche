@@ -1,10 +1,14 @@
 package com.sogeti.SoSenseiPsyche.model;
 
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
+
+
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class Game {
     public static final int CODE_LENGTH = 4;
@@ -15,12 +19,15 @@ public class Game {
     private List<String> guesses;
 
 // for testing purpose
+    Feedback feedback = new Feedback();
+    Code code = new Code();
+    List<Character> secretCode = code.getCode();
 
     public void startGame() {
         guesses = new ArrayList<>();
         secretCode = new Code();
         System.out.println("Welcome to So Sensei Psyche!");
-        System.out.println("You have 12 attempts to crack the code.");
+        System.out.println("You have "+ MAX_ATTEMPTS + " attempts to crack the code.");
         System.out.println("You can choose from the following colors: " + Arrays.toString(Color.values()).replace("[", "").replace("]", ""));
 
         secretCode.generateCode();
@@ -32,6 +39,7 @@ public class Game {
             guesses.add(Arrays.toString(newGuess));
             for (String guess : guesses) {
                 System.out.println(guess.replace("[", "").replace("]", ""));
+                System.out.println("You can choose from the following colors: " + Arrays.toString(Color.values()).replace("[", "").replace("]", ""));
             }
 
             // feedback logic
@@ -52,18 +60,26 @@ public class Game {
 
         for (int i = 0; i < CODE_LENGTH; i++) {
             if (!isCorrectColor(guess[i])) {
+
                 return null;
+            } else {
+                guessedCode.add(input.charAt(i));
             }
+
             guess[i] = String.valueOf(guess[i]);
         }
-        return guess;
+
+        return guessedCode;
+
     }
 
+
     public boolean isGameOver() {
- return (attempt == MAX_ATTEMPTS) ? (System.out.println("GAME OVER") == null && true) : false;
+       return (attempt == MAX_ATTEMPTS) ? (System.out.println("GAME OVER") == null && true) : false;
     }
 
     public static boolean isCorrectColor(String c) {
+
         for (Color color : Color.values()) {
             if (color.name().startsWith(c)) {
                 return true;
@@ -71,4 +87,5 @@ public class Game {
         }
         return false;
     }
+
 }
