@@ -60,11 +60,7 @@ public class Game {
     }
 
     public boolean isGameOver() {
-        if (attempt == MAX_ATTEMPTS) {
-            System.out.println("GAME OVER");
-            return true;
-        }
-        return false;
+ return (attempt == MAX_ATTEMPTS) ? (System.out.println("GAME OVER") == null && true) : false;
     }
 
     public static boolean isCorrectColor(String c) {
