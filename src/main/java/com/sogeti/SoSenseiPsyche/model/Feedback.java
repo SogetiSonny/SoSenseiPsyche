@@ -9,6 +9,14 @@ import static com.sogeti.SoSenseiPsyche.model.Game.CODE_LENGTH;
 public class Feedback {
 
     public String getFeedback(List<Character> secretCode, List<Character> guessedCode) {
+
+        // actually this is to validate that the secretCode and the guessCode are always valid
+        if (secretCode == null || guessedCode == null) {
+            throw new IllegalArgumentException("Secret code or guessed code cannot be null.");
+        }
+        if (secretCode.size() != guessedCode.size()) {
+            throw new IllegalArgumentException("Code must be of the same length.");
+        }
         List<Character> remainingSecretCode = new ArrayList<>(secretCode);
         List<Character> remainingGuessedCode = new ArrayList<>(guessedCode);
         StringBuilder feedback = new StringBuilder();
