@@ -15,7 +15,7 @@ public class Feedback {
             throw new IllegalArgumentException("Secret code or guessed code cannot be null.");
         }
         if (secretCode.size() != guessedCode.size()) {
-            throw new IllegalArgumentException("Secret code and guessed code must be of the same length.");
+            throw new IllegalArgumentException("Code must be of the same length.");
         }
         List<Character> remainingSecretCode = new ArrayList<>(secretCode);
         List<Character> remainingGuessedCode = new ArrayList<>(guessedCode);

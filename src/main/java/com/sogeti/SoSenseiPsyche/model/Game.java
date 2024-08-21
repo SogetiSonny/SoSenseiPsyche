@@ -24,13 +24,11 @@ public class Game {
 
         secretCode.generateCode();
 
-        // Game logic: make guess, check if game is solved, get feedback, new
-        // guess or game solved or max attempts reached is game over.
         while (!isGameOver()) {
             try {
                 newGuess = makeGuess(new Scanner(System.in));
                 if ((newGuess == null)) {
-                    System.out.println("Invalid guess. Please ensure your guess has " + CODE_LENGTH + " colors separated by spaces.");
+                    System.out.println("Invalid guess. Please ensure your guess has " + CODE_LENGTH);
                     continue;
                 }
 
@@ -51,23 +49,16 @@ public class Game {
         }
     }
 
-    // TODO: return type should be Feedback. Adjustments need to be made when
-    //  class Feedback and logic is finished.
+
     public static String[] makeGuess(Scanner scanner) {
         System.out.print("Enter your guess (e.g., RGBY): ");
         String[] guess = scanner.nextLine().toUpperCase().split(" ");
-
-        if (guess.length != CODE_LENGTH) {
-            System.out.println("Error: Your guess must contain exactly " + CODE_LENGTH + " colors.");
-            return null;
-        }
 
         for (int i = 0;
              i < CODE_LENGTH;
              i++) {
             if (!isCorrectColor(guess[i])) {
                 System.out.println("Error: " + guess[i] + " is not a valid color. Please use one of the available colors.");
-                return null;
             }
 
             guess[i] = String.valueOf(guess[i]);
@@ -82,7 +73,7 @@ public class Game {
             System.out.println("GAME OVER. You've used all your attempts!");
             return true;
         }
-        // Additional logic to check if the user has guessed the correct code
+
         return false;
     }
 
