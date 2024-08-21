@@ -41,14 +41,14 @@ Start the application and follow the instructions to play the game.
 ### Example Gameplay
 Computer's Secret Code: G, B, R, Y (unknown to the player).
 
-Crack the code! You have 12 attempts. 
+Crack the code! You have 12 attempts.
 
-| ## |  Guess    |  Result   |
------------------------
-| 1  |  B G O S  |  0 0      |
-| 2  |  G B Y R  |  X X 0 0  |
-| 3  |  G Y B R  |  X 0 0 0  | 
-| 4  |  G B R Y  |  X X X X  |
-You won! 
+| ##  | Guess   | Result  |
+|-----|---------|---------|
+| 1   | B G O S | 0 0     |
+| 2   | G B Y R | X X 0 0 |
+| 3   | G Y B R | X 0 0 0 | 
+| 4   | G B R Y | X X X X |
+You won!
 
 ```sh
