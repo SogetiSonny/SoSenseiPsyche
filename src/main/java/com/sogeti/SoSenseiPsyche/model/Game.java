@@ -19,7 +19,7 @@ public class Game {
         guesses = new ArrayList<>();
         secretCode = new Code();
         System.out.println("Welcome to So Sensei Psyche!");
-        System.out.println("You have "+ MAX_ATTEMPTS + " attempts to crack the code.");
+        System.out.println("You have " + MAX_ATTEMPTS + " attempts to crack the code.");
         System.out.println("You can choose from the following colors: " + Arrays.toString(Color.values()).replace("[", "").replace("]", ""));
 
         secretCode.generateCode();
@@ -27,16 +27,27 @@ public class Game {
         // Game logic: make guess, check if game is solved, get feedback, new
         // guess or game solved or max attempts reached is game over.
         while (!isGameOver()) {
-            newGuess = makeGuess(new Scanner(System.in));
-            guesses.add(Arrays.toString(newGuess));
-            for (String guess : guesses) {
-                System.out.println(guess.replace("[", "").replace("]", ""));
-                System.out.println("You can choose from the following colors: " + Arrays.toString(Color.values()).replace("[", "").replace("]", ""));
+            try {
+                newGuess = makeGuess(new Scanner(System.in));
+                if ((newGuess == null)) {
+                    System.out.println("Invalid guess. Please ensure your guess has " + CODE_LENGTH + " colors separated by spaces.");
+                    continue;
+                }
+
+                guesses.add(Arrays.toString(newGuess));
+                for (String guess : guesses) {
+                    System.out.println(guess.replace("[", "").replace("]", ""));
+                    System.out.println("You can choose from the following colors: " + Arrays.toString(Color.values()).replace("[", "").replace("]", ""));
+                }
+
+                // feedback logic
+
+                attempt++;
+
+            } catch (IllegalArgumentException error) {
+                System.out.println("Error: " + error.getMessage());
             }
 
-            // feedback logic
-
-            attempt++;
         }
     }
 
@@ -47,11 +58,15 @@ public class Game {
         String[] guess = scanner.nextLine().toUpperCase().split(" ");
 
         if (guess.length != CODE_LENGTH) {
+            System.out.println("Error: Your guess must contain exactly " + CODE_LENGTH + " colors.");
             return null;
         }
 
-        for (int i = 0; i < CODE_LENGTH; i++) {
+        for (int i = 0;
+             i < CODE_LENGTH;
+             i++) {
             if (!isCorrectColor(guess[i])) {
+                System.out.println("Error: " + guess[i] + " is not a valid color. Please use one of the available colors.");
                 return null;
             }
 
@@ -64,9 +79,10 @@ public class Game {
 
     public boolean isGameOver() {
         if (attempt == MAX_ATTEMPTS) {
-            System.out.println("GAME OVER");
+            System.out.println("GAME OVER. You've used all your attempts!");
             return true;
         }
+        // Additional logic to check if the user has guessed the correct code
         return false;
     }
 
@@ -79,5 +95,4 @@ public class Game {
         }
         return false;
     }
-
 }

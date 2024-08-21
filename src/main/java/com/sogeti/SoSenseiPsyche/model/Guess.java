@@ -11,6 +11,9 @@ public class Guess {
     }
 
     public void setGuess(List<Color> guess) {
+        if (guess == null || guess.size() != Game.CODE_LENGTH) {
+            throw new IllegalArgumentException("Guess must contain exactly " + Game.CODE_LENGTH + " colors.");
+        }
         this.guess = guess;
     }
 
