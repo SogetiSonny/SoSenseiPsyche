@@ -15,12 +15,10 @@ public class Feedback {
         for (int index = 0; index < CODE_LENGTH; index++) {
             if (guessedCode.get(index).equals(secretCode.get(index))) {
                 feedback.append("o");
-                remainingSecretCode.set(index, ' ');
-                remainingGuessedCode.set(index, ' ');
+                remainingSecretCode.remove(index);
+                remainingGuessedCode.remove(index);
             }
         }
-        remainingSecretCode = remainingSecretCode.stream().filter(character -> character!= ' ').collect(Collectors.toList());
-        remainingGuessedCode = remainingGuessedCode.stream().filter(character -> character!= ' ').collect(Collectors.toList());
 
         for (Character guessedChar : remainingGuessedCode) {
             if (remainingSecretCode.contains(guessedChar)) {
@@ -28,9 +26,9 @@ public class Feedback {
                 remainingSecretCode.remove(guessedChar);
             }
         }
+
         return feedback.toString();
     }
 
-
-
 }
+
