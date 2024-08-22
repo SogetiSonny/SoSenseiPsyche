@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Game {
     public static final int CODE_LENGTH = 4;
-    private int attemptsRemaining = 2;
+    private int attemptsRemaining = 12;
     private List<String> guesses;
     private List<Character> secretCode;
     private final Scanner scanner = new Scanner(System.in);
