@@ -1,6 +1,9 @@
 package com.sogeti.SoSenseiPsyche.model;
 
+import com.sogeti.SoSenseiPsyche.record.FeedbackRecord;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,10 +18,13 @@ public class Feedback {
         for (int index = 0; index < CODE_LENGTH; index++) {
             if (guessedCode.get(index).equals(secretCode.get(index))) {
                 feedback.append("o");
-                remainingSecretCode.remove(index);
-                remainingGuessedCode.remove(index);
+                remainingSecretCode.set(index, ' ');
+                remainingGuessedCode.set(index, ' ');
             }
         }
+
+        remainingSecretCode = remainingSecretCode.stream().filter(character -> character!= ' ').collect(Collectors.toList());
+        remainingGuessedCode = remainingGuessedCode.stream().filter(character -> character!= ' ').collect(Collectors.toList());
 
         for (Character guessedChar : remainingGuessedCode) {
             if (remainingSecretCode.contains(guessedChar)) {
@@ -27,8 +33,12 @@ public class Feedback {
             }
         }
 
+
         return feedback.toString();
     }
 
+    public FeedbackRecord setFeedbackRecord(int attempt, String guess, String feedback) {
+        return new FeedbackRecord(attempt, guess, feedback);
+    }
 }
 
