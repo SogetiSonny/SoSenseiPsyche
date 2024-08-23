@@ -58,7 +58,7 @@ public class Game {
         }
 
         while(!guessValidation.userInputIsValid(guess)) {
-            System.out.print("Enter your guess (e.g., RGBY): ");
+            System.out.print("Enter your guess (e.g., R G B Y or Red Green Blue Yellow): ");
             guess = scanner.nextLine().toUpperCase().split(" ");
         }
 
@@ -66,7 +66,9 @@ public class Game {
             guessList.add(letter.charAt(0));
         }
 
-        feedbackList.add(feedback.setFeedbackRecord(attempt, String.join(", ", guess), feedback.getFeedback(secretCode, guessList)));
+        //feedbackList.add(feedback.setFeedbackRecord(attempt, String.join(", ", guess), feedback.getFeedback(secretCode, guessList)));
+        feedbackList.add(feedback.setFeedbackRecord(attempt, guessList.toString(), feedback.getFeedback(secretCode, guessList)));
+
     }
 
     private boolean isGameOver() {
