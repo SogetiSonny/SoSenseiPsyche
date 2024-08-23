@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f13a97e7-a875-4462-a110-aa52c3ae8468" name="Changes" comment="Added option for user to quit the game">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/helpers/ColorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/helpers/ColorMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Feedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/validations/GuessValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/validations/GuessValidation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/game-history-table" />
+        <entry key="$PROJECT_DIR$" value="feature/swing-test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,7 +52,7 @@
     "Application.SoSenseiPsycheApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/gameboard",
+    "git-widget-placeholder": "bugfix/no-space-guess-possible",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/projects/SoSenseiPsyche",
     "project.structure.last.edited": "Problems",
@@ -98,6 +99,13 @@
         <item itemvalue="Application.Guesses" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
