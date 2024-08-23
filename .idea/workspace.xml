@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f13a97e7-a875-4462-a110-aa52c3ae8468" name="Changes" comment="Added option for user to quit the game">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/helpers/ColorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/helpers/ColorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Feedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/validations/GuessValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/validations/GuessValidation.java" afterDir="false" />
-    </list>
+    <list default="true" id="f13a97e7-a875-4462-a110-aa52c3ae8468" name="Changes" comment="Added option for user to quit the game" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
