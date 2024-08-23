@@ -21,16 +21,17 @@ public class ColorMapper {
         for (Map.Entry<Character, String> entry : colorMap.entrySet()) {
             colorMapping.append(entry.getKey()).append(" = ").append(entry.getValue()).append(", ");
         }
-
         if (colorMapping.length() > 0) {
             colorMapping.setLength(colorMapping.length() - 2);
         }
-
         return colorMapping.toString();
     }
 
-    public static boolean doesColorExist(char colorKey) {
+    public static boolean doesColorExist(String color) {
         Map<Character, String> colorMap = setColorMap();
-        return colorMap.containsKey(colorKey);
+        if (color.length() == 1) {
+            return colorMap.containsKey(color.charAt(0));
+        }
+        return colorMap.containsValue(color);
     }
 }

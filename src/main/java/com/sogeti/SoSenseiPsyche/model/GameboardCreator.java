@@ -8,7 +8,7 @@ public class GameboardCreator {
     public static void printGameBoard(List<FeedbackRecord> feedbackRecordList) {
         for (FeedbackRecord feedbackRecord : feedbackRecordList) {
             System.out.println("| " + String.format("%-2s", feedbackRecord.attempt()) + " | "
-                    + String.format("%-11s", feedbackRecord.guess()) + " | "
+                    + String.format(feedbackRecord.guess().replaceAll("[,\\[\\]]", "").trim()) + " | "
                     + String.format("%-4s", feedbackRecord.feedback()) + " | ");
         }
     }

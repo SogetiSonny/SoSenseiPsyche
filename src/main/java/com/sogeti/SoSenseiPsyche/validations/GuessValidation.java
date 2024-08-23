@@ -11,9 +11,9 @@ public class GuessValidation {
             return false;
         }
 
-        for (String letter : guess) {
-            if (!doesColorExist(letter.charAt(0))) {
-                System.out.printf("Invalid input. %s is not a valid color.%n", letter);
+        for (String color : guess) {
+            if (!doesColorExist(color)) {
+                System.out.printf("Please enter valid color names or valid color first letters. ");
                 return false;
             }
         }
