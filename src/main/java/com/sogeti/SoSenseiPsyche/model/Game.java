@@ -24,13 +24,9 @@ public class Game {
 
     public void startGame() {
         Code code = new Code();
-//        guesses = new ArrayList<>();
         secretCode = code.generateCode();
         feedbackList = new ArrayList<>();
         System.out.println("Welcome to So Sensei Psyche!");
-
-        //For testing purposes we show the secret code
-        System.out.println(secretCode);
 
         // Game logic: make guess, check if game is solved, get feedback, new
         // guess or game solved or max attempts reached is game over.
