@@ -40,6 +40,9 @@ public class Game {
 
             attempt++;
             attemptsRemaining--;
+            if (attempt  > 13) {  // true at Integer.MAX_VALUE +1
+                break;
+            }
         }
 
         System.exit(0);
@@ -47,7 +50,7 @@ public class Game {
 
     private void userGuess() {
         List<Character> guessList = new ArrayList<>();
-        System.out.print("Enter your guess (e.g., RGBY): ");
+        System.out.print("Enter your guess (e.g., R G B Y or Red Green Blue Yellow): ");
         String[] guess = scanner.nextLine().toUpperCase().split(" ");
 
         for(String guessString : guess) {
@@ -65,23 +68,36 @@ public class Game {
         for (String letter : guess) {
             guessList.add(letter.charAt(0));
         }
-
-        //feedbackList.add(feedback.setFeedbackRecord(attempt, String.join(", ", guess), feedback.getFeedback(secretCode, guessList)));
         feedbackList.add(feedback.setFeedbackRecord(attempt, guessList.toString(), feedback.getFeedback(secretCode, guessList)));
-
     }
 
     private boolean isGameOver() {
         if (attemptsRemaining == 0) {
             System.out.println("GAME OVER");
-            return true;
+            playAgain();
         }
 
         if (!feedbackList.isEmpty() && feedbackList.get(feedbackList.size() - 1).feedback().equals("oooo")) {
             System.out.println("Congratulations! You've cracked the code!");
-            return true;
+            playAgain();
         }
+        return false;
+    }
 
+    private boolean playAgain() {
+        System.out.println("Would you like to play again? (Y/N)");
+        String playAgain = scanner.nextLine();
+        if (playAgain.equalsIgnoreCase("Y")) {
+            attempt = 1;
+            attemptsRemaining = 12;
+            startGame();
+        } else if (playAgain.equalsIgnoreCase("N")) {
+            System.out.println("Goodbye!");
+            System.exit(0);
+        } else if (!playAgain.equalsIgnoreCase("Y") || !playAgain.equalsIgnoreCase("N")) {
+            System.out.println("Invalid input. Please enter Y or N.");
+            playAgain();
+        }
         return false;
     }
 }
