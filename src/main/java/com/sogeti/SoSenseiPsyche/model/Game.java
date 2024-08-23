@@ -47,7 +47,7 @@ public class Game {
 
     private void userGuess() {
         List<Character> guessList = new ArrayList<>();
-        System.out.print("Enter your guess (e.g., RGBY): ");
+        System.out.print("Enter your guess (e.g., R G B Y or Red Green Blue Yellow): ");
         String[] guess = scanner.nextLine().toUpperCase().split(" ");
 
         for(String guessString : guess) {
@@ -65,10 +65,7 @@ public class Game {
         for (String letter : guess) {
             guessList.add(letter.charAt(0));
         }
-
-        //feedbackList.add(feedback.setFeedbackRecord(attempt, String.join(", ", guess), feedback.getFeedback(secretCode, guessList)));
         feedbackList.add(feedback.setFeedbackRecord(attempt, guessList.toString(), feedback.getFeedback(secretCode, guessList)));
-
     }
 
     private boolean isGameOver() {
@@ -78,8 +75,16 @@ public class Game {
         }
 
         if (!feedbackList.isEmpty() && feedbackList.get(feedbackList.size() - 1).feedback().equals("oooo")) {
-            System.out.println("Congratulations! You've cracked the code!");
-            return true;
+            System.out.println("Congratulations! You've cracked the code! Do you want to play again? (Y/N)");
+            String playAgain = scanner.nextLine();
+            if (playAgain.equalsIgnoreCase("Y")) {
+                attempt = 1;
+                attemptsRemaining = 12;
+                startGame();
+            } else {
+                System.out.println("Goodbye!");
+                return true;
+            }
         }
 
         return false;
