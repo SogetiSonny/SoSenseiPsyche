@@ -22,8 +22,8 @@ public class Feedback {
             }
         }
 
-        remainingSecretCode = remainingSecretCode.stream().filter(character -> character!= ' ').collect(Collectors.toList());
-        remainingGuessedCode = remainingGuessedCode.stream().filter(character -> character!= ' ').collect(Collectors.toList());
+        remainingSecretCode = remainingSecretCode.stream().filter(character -> character != ' ').collect(Collectors.toList());
+        remainingGuessedCode = remainingGuessedCode.stream().filter(character -> character != ' ').collect(Collectors.toList());
 
         for (Character guessedChar : remainingGuessedCode) {
             if (remainingSecretCode.contains(guessedChar)) {

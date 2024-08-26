@@ -1,7 +1,5 @@
 package com.sogeti.SoSenseiPsyche.validations;
 
-import com.sogeti.SoSenseiPsyche.model.Color;
-
 import static com.sogeti.SoSenseiPsyche.helpers.ColorMapper.doesColorExist;
 
 public class GuessValidation {
@@ -13,7 +11,7 @@ public class GuessValidation {
 
         for (String color : guess) {
             if (!doesColorExist(color)) {
-                System.out.printf("Please enter valid color names or valid color first letters. ");
+                System.out.print("Please enter valid color names or valid color first letters. ");
                 return false;
             }
         }

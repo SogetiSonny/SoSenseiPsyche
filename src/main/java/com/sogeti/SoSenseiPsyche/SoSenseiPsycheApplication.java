@@ -14,3 +14,8 @@ public class SoSenseiPsycheApplication {
         game.startGame();
     }
 }
+
+
+
+
+
