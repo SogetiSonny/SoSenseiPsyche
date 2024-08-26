@@ -2,7 +2,6 @@ package com.sogeti.SoSenseiPsyche.helpers;
 
 import com.sogeti.SoSenseiPsyche.model.Color;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
