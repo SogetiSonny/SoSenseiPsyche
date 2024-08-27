@@ -22,6 +22,13 @@ public class Game {
     private final Feedback feedback = new Feedback();
     GuessValidation guessValidation = new GuessValidation();
 
+    public Game() {
+        this.attempt = 1;
+        this.attemptsRemaining = 12;
+        this.feedbackList = new ArrayList<>();
+    }
+
+
     public void startGame() {
         Code code = new Code();
         secretCode = code.generateCode();
@@ -99,5 +106,25 @@ public class Game {
             playAgain();
         }
         return false;
+    }
+
+
+    public void processGuess() {
+        // Process the guess and generate feedback
+        feedbackList.add(new FeedbackRecord(attempt, "guess", "oooo")); // Example feedback
+        attempt++;
+        attemptsRemaining--;
+    }
+
+    public int getAttemptsRemaining() {
+        return attemptsRemaining;
+    }
+
+    public List<FeedbackRecord> getFeedbackList() {
+        return feedbackList;
+    }
+
+    public int getAttempt() {
+        return attempt;
     }
 }

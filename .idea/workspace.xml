@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f13a97e7-a875-4462-a110-aa52c3ae8468" name="Changes" comment="Added option for user to quit the game">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/SoSenseiPsycheApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/SoSenseiPsycheApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/record/FeedbackRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sogeti/SoSenseiPsyche/record/FeedbackRecord.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,18 +20,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/swing-test" />
+        <entry key="$PROJECT_DIR$" value="feature/tests" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,9 +52,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.SoSenseiPsycheApplication.executor": "Run",
+    "JUnit.CodeTest.executor": "Run",
+    "JUnit.ColorMapperTest.executor": "Run",
+    "JUnit.ColorMapperTest.givenColorMapIsCreated_whenMapIsPopulated_thenItShouldContainAllPredefinedColorsAndCorrectMappings.executor": "Run",
+    "JUnit.FeedbackTest.executor": "Run",
+    "JUnit.GameboardCreatorTest.executor": "Run",
+    "JUnit.GuessValidationTest (1).executor": "Run",
+    "JUnit.GuessValidationTest.executor": "Run",
+    "JUnit.com.sogeti.SoSenseiPsyche.helpers in SoSenseiPsyche.executor": "Coverage",
+    "JUnit.com.sogeti.SoSenseiPsyche.model in SoSenseiPsyche.executor": "Coverage",
+    "JUnit.com.sogeti.SoSenseiPsyche.validations in SoSenseiPsyche.executor": "Coverage",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/play-again",
+    "git-widget-placeholder": "feature/java-fx",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/projects/SoSenseiPsyche",
     "project.structure.last.edited": "Problems",
@@ -86,6 +100,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.sogeti.SoSenseiPsyche.helpers in SoSenseiPsyche" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoSenseiPsyche" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sogeti.SoSenseiPsyche.helpers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sogeti.SoSenseiPsyche.helpers" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.sogeti.SoSenseiPsyche.model in SoSenseiPsyche" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoSenseiPsyche" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sogeti.SoSenseiPsyche.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sogeti.SoSenseiPsyche.model" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.sogeti.SoSenseiPsyche.validations in SoSenseiPsyche" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SoSenseiPsyche" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sogeti.SoSenseiPsyche.validations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sogeti.SoSenseiPsyche.validations" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,6 +151,9 @@
       <list>
         <item itemvalue="Application.SoSenseiPsycheApplication" />
         <item itemvalue="Application.Guesses" />
+        <item itemvalue="JUnit.com.sogeti.SoSenseiPsyche.validations in SoSenseiPsyche" />
+        <item itemvalue="JUnit.com.sogeti.SoSenseiPsyche.model in SoSenseiPsyche" />
+        <item itemvalue="JUnit.com.sogeti.SoSenseiPsyche.helpers in SoSenseiPsyche" />
       </list>
     </recent_temporary>
   </component>
@@ -137,5 +196,16 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SoSenseiPsyche$com_sogeti_SoSenseiPsyche_helpers_in_SoSenseiPsyche.ic" NAME="com.sogeti.SoSenseiPsyche.helpers in SoSenseiPsyche Coverage Results" MODIFIED="1724673813192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.sogeti.SoSenseiPsyche.helpers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoSenseiPsyche$com_sogeti_SoSenseiPsyche_model_in_SoSenseiPsyche.ic" NAME="com.sogeti.SoSenseiPsyche.model in SoSenseiPsyche Coverage Results" MODIFIED="1724673823228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.sogeti.SoSenseiPsyche.model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoSenseiPsyche$com_sogeti_SoSenseiPsyche_validations_in_SoSenseiPsyche.ic" NAME="com.sogeti.SoSenseiPsyche.validations in SoSenseiPsyche Coverage Results" MODIFIED="1724673833905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.sogeti.SoSenseiPsyche.validations.*</FILTER>
+    </SUITE>
   </component>
 </project>
